@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+   <title> titre </title>
+ </head>
+ <body>
+
+
+<div class="container text-center">
+  <blockquote>
+    <p class="citation">Citation</p>
+     </blockquote>
+     <button id="generer" class="btn btn-primary">Générer</button>
+     <br />
+     <blockquote>
+      <p class="gtgabisme">Citation</p>
+       </blockquote>
+       <button id="gabiisme" class="btn btn-primary">Générer un gabiisme</button>
+</div>
+
+
+
+</body>
+
+ <script>
+
+ const tableauCitationsMacron =[
+    // Début 
+    ["Contrairement à ce que certains disent,", "Si j'étais chômeur", "Je suis maoïste,", "Le libéralisme,", "Il faut des jeunes français"],
+    // Milieu 
+    ["trouver du travail", "c'est un de mes films préférés,", "pour se payer un costard"], 
+    // Fin
+    ["il suffit de traverser la rue.", "ça coute un pognon de dingue !", "est une valeur de gauche", "c'est de travailler", "je ne me vois pas comme un roi"]
+   ];
+
+   const tableauGtGabi =[
+     //Début
+     ["Shinboy X,", "Kinder Hertz,", "Sousse Calibur,", "Métrois Prime,", "Magical Miroir string Mickey Mahousse", "Red Dape Recetion,", "Cigarette Christine,", "Fist fast furious, le deux,"],
+     //Milieu
+     ["j'ai fait un coup de fusil,","j'y ai joué un peu,", "je connais pas,", "c'est en english,", "moi je le dis comme ça,", "d'à l'époque"],
+     // Milieu
+     ["très content", "super classe", "intérégeant", "faut le foutre dans le frigo", "c'est pour un échange"]
+   ];
+
+   
+   class randomCitations {
+       constructor (debut, milieu, fin) {
+           this.debut=debut;
+           this.milieu=milieu;
+           this.fin=fin;
+       }
+       genererMotAleatoire(tableau) {
+        return [Math.floor(Math.random() * tableau.length)];
+      }
+
+       genererCitation() {
+           const start = this.debut[Math.floor(Math.random() * this.debut.length)];
+           const middle = this.milieu[Math.floor(Math.random() * this.milieu.length)];
+           const end = this.fin[Math.floor(Math.random() * this.fin.length)];
+   
+           const citation = start + " " + middle + " " + end;;
+           return citation;
+    }}
+
+const citationMacron = new randomCitations(tableauCitationsMacron[0], tableauCitationsMacron[1], tableauCitationsMacron[2]); 
+const citationGtGabi = new randomCitations(tableauGtGabi[0], tableauGtGabi[1], tableauGtGabi[2]); 
+console.log(citationMacron.genererCitation());
+console.log(citationGtGabi.genererCitation());
+
+
+$('document').ready(function() {
+  $('#generer').click(function() {
+    $('.citation').html(citationMacron.genererCitation());
+});
+
+});
+
+$('document').ready(function() {
+  $('#gabiisme').click(function() {
+    $('.gtgabisme').html(citationGtGabi.genererCitation());
+});
+
+});
+
+</script>
+</html>

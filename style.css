@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-style: normal;
+}
+
+.author {
+    color: white;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    padding: 15px 0px 15px 0px;
+    font-size: 35px;
+}
+
+.textcitation
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.titrecitations 
+
+{
+    padding-bottom : 15px;
+}
+
+.philotron {
+    color: white;
+    background-color: #151515;
+    padding-top: 10px;
+    min-height: 10vh;
+    
+}
+
+.mainbloc {
+    background-color: #FCFFFC;
+    padding-top: 15px;
+    min-height: 25vh;
+    color: black;
+}
+
+.bloccitation {
+    background-color: #248232;
+    padding-top: 20px;
+    min-height: 50vh;
+    color:#FCFFFC;
+}
+
+.form-control {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: bold;
+    border : dashed
+    
+}
+
+
+.main-container {
+    width: 80%;
+    padding: 20px;
+    margin-top: 10px;
+    background: #eee
+}
+
+.btn-select {
+    background: #2BA84A;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 0px;
+    border: 1px black;
+    padding: 10px;
+    width: 30%;
+}
+
+.btn-select:hover {
+    color: white;
+}
+
+.btn-secondary {
+    border-radius: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    max-height: 120px;
+}
+
+.imgtype
+{
+    max-height: 300px;
+    border : 1px solid black;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+

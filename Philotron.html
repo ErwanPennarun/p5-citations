@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <title>Le Philotron !</title>
+</head>
+
+<body>
+
+  <div class="container-fluid text-center philotron">
+    <div class="container"><img src="logophi.png" class="logo" href="logo">
+      <h1>Le Philotron</h1>
+    </div>
+  </div>
+  <div class="container-fluid mainbloc">
+    <div class="container text-center">
+      <form>
+        <div class="form-group text-center">
+          <p>Choisissez un nombre de citations à générer (5 maximum):</p>
+          <input class="form-control" type="number" name="number" id="nombre" min="1" max="5" value="1">
+        </div>
+      </form>
+
+      <p>Choisissez un type de citations à générer en cliquant sur l'image correspondante :</p>
+
+      <div class="text-center">
+        <img class="imgtype" src="nietzschepng.png" href="Philosophie à peu près" id="philo">
+        <img class="imgtype" src="karlmarx.png" href="Julosophie triomphante" id="jul">
+
+      </div>
+      <div class="text-center"><button id="stop" value="Plutôt philosophe ou Jul ?"
+          class="btn btn-secondary text-center center-block">Revenir à zéro</button></div>
+    </div>
+  </div>
+  <div class="container-fluid bloccitation">
+    <h2 class="text-center titrecitations" id="title">Plutôt philosophe ou Jul ?</h2>
+    <blockquote>
+      <p class="textcitation text-center"></p>
+    </blockquote>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script src="citations.js"></script>
+</body>
+
+</html>
